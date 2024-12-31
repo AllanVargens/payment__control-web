@@ -3,6 +3,7 @@ import { Form, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
+import { ConfirmButtonComponent } from '../confirm-button/confirm-button.component';
 
 interface LoginForm {
   username: FormControl
@@ -12,7 +13,7 @@ interface LoginForm {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ConfirmButtonComponent],
   providers: [LoginService, ToastrService],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

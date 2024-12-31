@@ -12,7 +12,13 @@ export const routes: Routes = [
     {
         path: "home",
         component: HomePageComponent,
-        canActivate: [authGuard]
+        canActivate: [authGuard],
+        children: [
+            // {
+            //     path: 'child-a', // this is the component with the <router-outlet> in the home-component
+            //     component: ChildAComponent
+            //   }
+        ]
     },
     { path: '**', redirectTo: '/login' }
 ];
